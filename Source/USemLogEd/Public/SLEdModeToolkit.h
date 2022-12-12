@@ -17,6 +17,7 @@ class FSLEdModeToolkit : public FModeToolkit
 public:
 	// Ctor
 	FSLEdModeToolkit();
+	~FSLEdModeToolkit();
 	
 	/** FModeToolkit interface */
 	//UFUNCTION()
@@ -182,6 +183,7 @@ private:
 
 	// Widget pointer
 	TSharedPtr<SWidget> ToolkitWidget;
+	TSharedPtr<SPanel> ToolkitPanel;
 
 	/** SCS editor, refresh view if an actor is selected when adding/removing components */
 	TSharedPtr<class SSCSEditor> SCSEditor;
@@ -192,4 +194,5 @@ private:
 	bool bProritizeChildrenFlag;
 	bool bResetFlag;
 	bool bTryImportFlag;
+	int ToolBox;
 };

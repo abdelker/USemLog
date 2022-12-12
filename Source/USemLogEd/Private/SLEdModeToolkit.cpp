@@ -45,6 +45,10 @@ FSLEdModeToolkit::FSLEdModeToolkit()
 	bTryImportFlag = true;
 }
 
+FSLEdModeToolkit::~FSLEdModeToolkit()
+{
+}
+
 // Create the widget, bind the button callbacks
 void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 {
@@ -52,59 +56,59 @@ void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 		.HAlign(HAlign_Center)
 		.Padding(15)
 		[
-			SNew(SVerticalBox)
+		SAssignNew(ToolkitPanel,SVerticalBox)
 
-			// Flag checkboxes
-			+ CreateCompactCheckBoxSlot()
-			//+ CreateOverwriteFlagSlot()
-			//+ CreateOnlySelectedFlagSlot()
-			//+ CreateIncludeChildrenFlagSlot()
-			//+ CreateResetFlagSlot()
-			//+ CreateTryImportFlagSlot()
-
-			// Individual Components
-			+ CreateSeparatorHackSlot()
-			+ CreateIndividualsTxtSlot()
-			+ CreateIndividualsSlot()
-			+ CreateIndividualsFuncSlot()
-
-			// Individual Values
-			+ CreateIndividualValuesTxtSlot()
-			+ CreateIndividualValuesAllSlot()
-			+ CreateIndivualValuesIdSlot()
-			+ CreateIndividualValuesClassSlot()
-			+ CreateIndividualValuesVisualMaskSlot()
-
-			// Import / Export
-			+ CreateImportExportTxtSlot()
-			+ CreateImportExportSlot()
-
-			// Individual Visual Info
-			+ CreateSeparatorHackSlot()
-			+ CreateIndividualsInfoTxtSlot()
-			+ CreateIndividualsInfoSlot()
-			+ CreateIndividualsInfoFuncSlot()
-
-			// Individual Managers
-			+ CreateSeparatorHackSlot()
-			+ CreateIndividualsManagersTxtSlot()
-			+ CreateIndividualsManagersSlot()
-
-			// Semantic Map
-			+ CreateSeparatorHackSlot()
-			+ CreateSemMapSlot()
-
-			// Misc
-			+ CreateSeparatorHackSlot()
-			+ CreateUtilsTxtSlot()
-			+ CreateConvertToVizMapSlot()
-			+ CreateLogIdsSlot()
-			+ CreateAddSemMonitorsSlot()
-			+ CreateEnableOverlapsSlot()
-			+ CreateShowSemData()
-			+ CreateEnableInstacedMeshMaterialsSlot()
-			+ CreateTriggerGCSlot()
-			+ CreateGenericButtonSlot()
+			// // Flag checkboxes
+			// + CreateCompactCheckBoxSlot()
+			// //+ CreateOverwriteFlagSlot()
+			// //+ CreateOnlySelectedFlagSlot()
+			// //+ CreateIncludeChildrenFlagSlot()
+			// //+ CreateResetFlagSlot()
+			// //+ CreateTryImportFlagSlot()
+			//
+			// // Individual Components
+			   + CreateSeparatorHackSlot()
+			// + CreateIndividualsTxtSlot()
+			// + CreateIndividualsSlot()
+			// + CreateIndividualsFuncSlot()
+			//
+			// // Individual Values
+			// + CreateIndividualValuesTxtSlot()
+			// + CreateIndividualValuesAllSlot()
+			// + CreateIndivualValuesIdSlot()
+			// + CreateIndividualValuesClassSlot()
+			// + CreateIndividualValuesVisualMaskSlot()
+			//
+			// // Import / Export
+			// + CreateImportExportTxtSlot()
+			// + CreateImportExportSlot()
+			//
+			// // Individual Visual Info
+			// + CreateSeparatorHackSlot()
+			// + CreateIndividualsInfoTxtSlot()
+			// + CreateIndividualsInfoSlot()
+			// + CreateIndividualsInfoFuncSlot()
+			//
+			// // Individual Managers
+			// + CreateSeparatorHackSlot()
+			// + CreateIndividualsManagersTxtSlot()
+			// + CreateIndividualsManagersSlot()
+			//
+			// // Semantic Map
+			// + CreateSeparatorHackSlot()
+			// + CreateSemMapSlot()
+			//
+			// // Misc
+			// + CreateSeparatorHackSlot()
+			// + CreateUtilsTxtSlot()
+			// + CreateConvertToVizMapSlot()
+			// + CreateLogIdsSlot()
+			// + CreateAddSemMonitorsSlot()
+			// + CreateEnableOverlapsSlot()
+			// + CreateShowSemData()
+			// + CreateEnableInstacedMeshMaterialsSlot()
+			// + CreateTriggerGCSlot()
+			// + CreateGenericButtonSlot()
 		];
 
 	FModeToolkit::Init(InitToolkitHost);
