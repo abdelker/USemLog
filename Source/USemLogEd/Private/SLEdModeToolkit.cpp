@@ -43,6 +43,8 @@ FSLEdModeToolkit::FSLEdModeToolkit()
 	bProritizeChildrenFlag = true;	
 	bResetFlag = false;
 	bTryImportFlag = true;
+	ToolkitPanel = nullptr;
+	ToolkitPanel = nullptr;
 }
 
 FSLEdModeToolkit::~FSLEdModeToolkit()
@@ -56,10 +58,10 @@ void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 		.HAlign(HAlign_Center)
 		.Padding(15)
 		[
-		SAssignNew(ToolkitPanel,SVerticalBox)
+			SAssignNew(ToolkitPanel,SVerticalBox)
 
 			// // Flag checkboxes
-			// + CreateCompactCheckBoxSlot()
+			 + CreateCompactCheckBoxSlot()
 			// //+ CreateOverwriteFlagSlot()
 			// //+ CreateOnlySelectedFlagSlot()
 			// //+ CreateIncludeChildrenFlagSlot()
@@ -67,7 +69,7 @@ void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 			// //+ CreateTryImportFlagSlot()
 			//
 			// // Individual Components
-			   + CreateSeparatorHackSlot()
+			 //  + CreateSeparatorHackSlot()
 			// + CreateIndividualsTxtSlot()
 			// + CreateIndividualsSlot()
 			// + CreateIndividualsFuncSlot()
