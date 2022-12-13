@@ -43,8 +43,8 @@ FSLEdModeToolkit::FSLEdModeToolkit()
 	bProritizeChildrenFlag = true;	
 	bResetFlag = false;
 	bTryImportFlag = true;
-	ToolkitPanel = nullptr;
-	ToolkitPanel = nullptr;
+	//ToolkitWidget = nullptr;
+	//ToolkitPanel = nullptr;
 }
 
 FSLEdModeToolkit::~FSLEdModeToolkit()
@@ -58,10 +58,10 @@ void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 		.HAlign(HAlign_Center)
 		.Padding(15)
 		[
-			SAssignNew(ToolkitPanel,SVerticalBox)
+			SAssignNew(ToolkitPanel, SVerticalBox)
 
 			// // Flag checkboxes
-			 + CreateCompactCheckBoxSlot()
+			// + CreateCompactCheckBoxSlot()
 			// //+ CreateOverwriteFlagSlot()
 			// //+ CreateOnlySelectedFlagSlot()
 			// //+ CreateIncludeChildrenFlagSlot()
@@ -69,7 +69,7 @@ void FSLEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 			// //+ CreateTryImportFlagSlot()
 			//
 			// // Individual Components
-			 //  + CreateSeparatorHackSlot()
+			   + CreateSeparatorHackSlot()
 			// + CreateIndividualsTxtSlot()
 			// + CreateIndividualsSlot()
 			// + CreateIndividualsFuncSlot()
@@ -136,7 +136,7 @@ class FEdMode* FSLEdModeToolkit::GetEditorMode() const
 
 /* -Start- Vertical Slot Entries */
 // Separator hack slot
-SVerticalBox::FSlot::FSlotArguments& FSLEdModeToolkit::CreateSeparatorHackSlot()
+SVerticalBox::FSlot::FSlotArguments& FSLEdModeToolkit::CreateSeparatorHackSlot() const
 {
 	return SVerticalBox::Slot()
 		.AutoHeight()

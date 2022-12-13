@@ -20,7 +20,7 @@ public:
 	~FSLEdModeToolkit();
 	
 	/** FModeToolkit interface */
-	//UFUNCTION()
+	
 	virtual void Init(const TSharedPtr<IToolkitHost>& InitToolkitHost) override;
 
 	/** IToolkit interface */
@@ -32,7 +32,7 @@ public:
 private:
 	/* **Start** Vertical Slot Entries */
 	// Separator hack slot
-	SVerticalBox::FSlot::FSlotArguments& CreateSeparatorHackSlot();
+	SVerticalBox::FSlot::FSlotArguments& CreateSeparatorHackSlot() const;
 
 	// Flag checkboxes
 	SVerticalBox::FSlot::FSlotArguments& CreateCompactCheckBoxSlot();
